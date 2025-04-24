@@ -10,3 +10,25 @@ function paperwork(n, m) {
     return n > 0 && m > 0 ? n * m : 0
 }
 
+//Challenge 2
+// Given an array of integers your solution should find the smallest integer.
+// For example:
+// Given [34, 15, 88, 2] your solution will return 2
+// Given [34, -345, -1, 100] your solution will return -345
+// You can assume, for the purpose of this problem, that the supplied array will not be empty.
+
+//Answer 2
+function findSmallestInt(arr) {
+    return Math.min(...arr);
+  }
+
+//Challenge 3
+// Take an array and remove every second element from the array. Always keep the first element and start removing with the next element.
+// Example:
+// ["Keep", "Remove", "Keep", "Remove", "Keep", ...] --> ["Keep", "Keep", "Keep", ...]
+// None of the arrays will be empty
+
+//Answer 3
+function removeEveryOther(arr){
+    arr.filter((_, index) => index % 2 === 0);
+  }

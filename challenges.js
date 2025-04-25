@@ -32,3 +32,27 @@ function findSmallestInt(arr) {
 function removeEveryOther(arr){
     arr.filter((_, index) => index % 2 === 0);
   }
+
+// Challenge 4
+// Write function bmi that calculates body mass index (bmi = weight / height2).
+// if bmi <= 18.5 return "Underweight"
+// if bmi <= 25.0 return "Normal"
+// if bmi <= 30.0 return "Overweight"
+// if bmi > 30 return "Obese"
+
+// Answer 4
+function bmi(weight, height) {
+    const bmi_calc = weight / (height * height);
+    return bmi_calc > 30 ? 'Obese' :
+           bmi_calc > 25 ? 'Overweight' :
+           bmi_calc > 18.5 ? 'Normal' : 'Underweight';
+}
+
+// Challenge 5
+// Given a string of digits, you should replace any digit below 5 with '0' and any digit 5 and above with '1'. Return the resulting string.
+// Note: input will never be an empty string
+
+// Answer 5
+function fakeBin(x) {
+    return x.replace(/\d/g, d => d < 5 ? 0 : 1);
+}

@@ -25,3 +25,36 @@ def square_sum(numbers):
 # Answer 3
 def boolean_to_string(b):
     return str(b)
+
+# Challenge 4
+# Complete the function so that it finds the average of the three scores passed to it and returns the letter value associated with that grade.
+# Numerical Score	Letter Grade
+# 90 <= score <= 100	'A'
+# 80 <= score < 90	'B'
+# 70 <= score < 80	'C'
+# 60 <= score < 70	'D'
+# 0 <= score < 60	'F'
+# Tested values are all between 0 and 100. Theres is no need to check for negative values or values greater than 100.
+
+# Answer 4
+def get_grade(s1, s2, s3):
+    average_grade = (s1 + s2 + s3)/3
+    match average_grade:
+        case x if 90 <= x:
+            return 'A'
+        case x if 80 <= x <= 90:
+            return 'B'
+        case x if 70 <= x <= 80:
+            return 'C'
+        case x if 60 <= x <= 70:
+            return 'D'
+        case x if x <= 60:
+            return "F"
+
+# Challenge 5
+# It's pretty straightforward. Your goal is to create a function that removes the first and last characters of a string. 
+# You're given one parameter, the original string. You don't have to worry about strings with less than two characters.
+
+# Answer 5
+def remove_char(s):
+    return s[1:-1]

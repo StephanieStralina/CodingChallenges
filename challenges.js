@@ -56,3 +56,39 @@ function bmi(weight, height) {
 function fakeBin(x) {
     return x.replace(/\d/g, d => d < 5 ? 0 : 1);
 }
+
+// Challenge 6
+// Square every digit of a number and concatenate them.
+// For example, if we run 9119 through the function, 811181 will come out, because 92 is 81 and 12 is 1. (81-1-1-81)
+// Example #2: An input of 765 will/should return 493625 because 72 is 49, 62 is 36, and 52 is 25. (49-36-25)
+// Note: The function accepts an integer and returns an integer.
+
+// Answer 6
+function squareDigits(num){
+  return Number(num.toString().split("").map(n => n*n).join(""));
+}
+
+// Challenge 7
+// Check to see if a string has the same amount of 'x's and 'o's. The method must return a boolean and be case insensitive. The string can contain any char.
+
+// Examples input/output:
+// XO("ooxx") => true
+// XO("xooxx") => false
+// XO("ooxXm") => true
+// XO("zpzpzpp") => true // when no 'x' and 'o' is present should return true
+// XO("zzoo") => false
+
+// Answer 7
+function XO(str) {
+  return (
+      str.toLowerCase().split("").filter(c => c === "x").length ===
+      str.toLowerCase().split("").filter(c => c === "o").length
+    );
+}
+
+// Answer 7 regex
+function XO(str) {
+  let x = str.match(/x/gi);
+  let o = str.match(/o/gi);
+  return (x && x.length) === (o && o.length);
+}

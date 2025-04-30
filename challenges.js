@@ -142,3 +142,9 @@ function rowSumOddNumbers(n) {
 // 114 --> -1  #  because 114 is not a perfect square
 
 // Answer 9
+function findNextSquare(sq) {
+  let sqrt = Math.sqrt(sq)
+  return (Number.isInteger(sqrt) === true) ? Math.pow((sqrt+1), 2) : -1
+}
+
+

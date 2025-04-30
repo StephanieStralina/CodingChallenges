@@ -88,7 +88,57 @@ function XO(str) {
 
 // Answer 7 regex
 function XO(str) {
-  let x = str.match(/x/gi);
+  let x = str.match(/x/gi); //gi global insensitive
   let o = str.match(/o/gi);
   return (x && x.length) === (o && o.length);
 }
+
+// Challenge 8
+// Given the triangle of consecutive odd numbers:
+
+//              1
+//           3     5
+//        7     9    11
+//    13    15    17    19
+// 21    23    25    27    29
+// ...
+// Calculate the sum of the numbers in the nth row of this triangle 
+// (starting at index 1) e.g.: (Input --> Output)
+
+// 1 -->  1
+// 2 --> 3 + 5 = 8
+
+// Answer 8
+function rowSumOddNumbers(n) {
+  let start = n * (n - 1) + 1;
+  let sum = 0;
+  for (let i = 0; i < n; i++) {
+    sum += start + i * 2; 
+  }
+  return sum;
+}
+
+// Fun Mathy Answer 8
+function rowSumOddNumbers(n) {
+	return n*n*n
+}
+
+// Challenge 9
+// You might know some pretty large perfect squares. 
+// But what about the NEXT one?
+
+// Complete the findNextSquare method that finds the next integral 
+// perfect square after the one passed as a parameter. 
+// Recall that an integral perfect square is an integer n 
+// such that sqrt(n) is also an integer.
+
+// If the argument is itself not a perfect square then return 
+// either -1 or an empty value like None or null, depending on your language. 
+// You may assume the argument is non-negative.
+
+// Examples ( Input --> Output )
+// 121 --> 144
+// 625 --> 676
+// 114 --> -1  #  because 114 is not a perfect square
+
+// Answer 9

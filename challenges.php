@@ -31,3 +31,27 @@ function past($h, $m, $s) {
   );
 }
 ?>
+
+<!-- Challenge 3 -->
+<!-- Write function RemoveExclamationMarks which removes all exclamation marks 
+from a given string. -->
+
+<!-- Answer 3 -->
+ <?php
+function remove_exclamation_marks($string) {
+  return str_replace("!", "", $string);
+}
+?>
+
+<!-- Challenge 4 -->
+<!-- You will be given an array a and a value x. 
+All you need to do is check whether the provided array contains the value.
+a can contain numbers or strings. x can be either.
+Return true if the array contains the value, false if not. -->
+
+<!-- Answer 4 -->
+<?php
+function findsolution($a, $x) {
+  return in_array($x, $a);
+}
+?>
